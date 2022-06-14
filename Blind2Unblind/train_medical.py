@@ -50,7 +50,7 @@ parser.add_argument("--Lambda1", type=float, default=1.0)
 parser.add_argument("--Lambda2", type=float, default=2.0)
 parser.add_argument("--increase_ratio", type=float, default=20.0)
 parser.add_argument('--dataset_id', type=str, default="")
-parser.add_argument('--dataset_path' type=str, default="")
+parser.add_argument('--dataset_path', type=str, default="")
 
 
 opt, _ = parser.parse_known_args()
