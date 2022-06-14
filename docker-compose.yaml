@@ -1,0 +1,13 @@
+services:
+  blind2unblind:
+    build: .
+    shm_size: '8gb'
+    volumes:
+      - "./Blind2Unblind:/workspace/Blind2Unblind"
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
