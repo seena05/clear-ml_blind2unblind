@@ -17,8 +17,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 ENV TZ=Asia/Tokyo
 
 
-COPY ./Blind2Unblind/requirements.txt ${PWD}
-RUN pip install -r requirements.txt
+# COPY ./Blind2Unblind/requirements.txt ${PWD}
+# RUN pip install -r requirements.txt
 
 # #
 # # プロジェクトに必要なパッケージをインストールする
@@ -29,13 +29,13 @@ RUN pip install -r requirements.txt
 # #
 # # requirements/runtime.txt をインストールする
 # #
-# RUN pip3 install --no-cache-dir --use-deprecated=legacy-resolver \
-#     matplotlib \
-#     numpy \
-#     pycocotools \
-#     six \
-#     terminaltables
-
+RUN pip3 install --no-cache-dir --use-deprecated=legacy-resolver \
+    joblib==1.1.0 \
+    numpy==1.22.4 \
+    Pillow==9.1.1 \
+    PyYAML==6.0 \
+    scipy==1.8.1 \
+    typing-extensions==4.2.0
 #
 # ClearML関連のパッケージ
 #

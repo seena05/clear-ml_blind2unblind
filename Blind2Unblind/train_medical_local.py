@@ -22,7 +22,7 @@ from arch_unet import UNet
 import utils as util
 from collections import OrderedDict
 
-import clearml
+# import clearml
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--noisetype", type=str, default="gauss25", choices=['gauss25', 'gauss5_50', 'poisson30', 'poisson5_50'])
@@ -579,10 +579,10 @@ def calculate_psnr(target, ref, data_range=255.0):
     psnr = 10.0 * np.log10(data_range**2 / np.mean(np.square(diff)))
     return psnr
 
-print(os.getcwd())
-print(opt)
+# print(os.getcwd())
+# print(opt)
 # Training Set
-clearml.Dataset.get(dataset_id=opt.dataset_id).get_mutable_local_copy(opt.dataset_path)
+# clearml.Dataset.get(dataset_id=opt.dataset_id).get_mutable_local_copy(opt.dataset_path)
 
 TrainingDataset = DataLoader_Medical_Img(opt.data_dir, patch=opt.patchsize)
 TrainingLoader = DataLoader(dataset=TrainingDataset,
