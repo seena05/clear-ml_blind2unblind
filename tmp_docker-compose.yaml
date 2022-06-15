@@ -1,5 +1,5 @@
 services:
-  clearml_blind2unblind:
+  blind2unblind:
     build: .
     shm_size: '8gb'
     volumes:
