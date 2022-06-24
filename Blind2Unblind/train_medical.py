@@ -28,7 +28,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--noisetype", type=str, default="gauss25", choices=['gauss25', 'gauss5_50', 'poisson30', 'poisson5_50'])
 parser.add_argument('--resume', type=str)
 parser.add_argument('--checkpoint', type=str)
-parser.add_argument('--data_dir', type=str,
+parser.add_argument('Ta--data_dir', type=str,
                     default='./data/train')
 parser.add_argument('--val_dirs', type=str, default='./dataset/fmdd_sub/validation')
 # parser.add_argument('--subfold', type=str, required=True, 
